@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
+
+/*----------I USE DESKTOP FIRST APPROACH------*/
+/*------------DESKTOPS / TVs Stylings----------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  display: grid;
+  grid-template-columns: 21% auto;
+  grid-template-rows: 60px auto 60px;
+  grid-template-areas:
+    "Header Header"
+    "Side   Main"
+    "Footer Footer";
+}
+header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  grid-area: Header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-family: "IBM Plex Serif", serif;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  grid-area: Side;
+  padding-top: 380px;
+}
+main {
+  padding-left: 90px;
+  grid-area: Main;
+  background-color: white;
+}
+h2 {
+  border-left: 2px solid black;
+  padding-left: 5px;
+}
+footer {
+  text-align: center;
+  grid-area: Footer;
+  font-style: italic;
+  border-top: 1px solid gray;
+  background-color: black;
+  color: white;
+  margin-top: 19px;
+  flex-shrink: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.info {
+  display: flex;
+  flex-direction: row;
+  margin-top: 60px;
+}
+image {
+  max-width: 100%;
+}
+.image {
+  margin-right: 50px;
+  max-width: 350px;
+  height: 350px;
+  float: left;
+}
+.mySlides {
+  box-shadow: 8px 8px 10px #aaa;
+}
+p {
+  font-family: "Museo Sans Rounded", "Segoe UI", "Helvetica Neue", sans-serif;
+  font-weight: 390;
+  font-size: 18px;
+  line-height: 32px;
+  color: black;
+  padding-left: 20px;
+}
+
+aside div {
+  background-color: #b7bdb9;
+  margin: 10px;
+  padding: 20px;
+}
+#table {
+  text-align: center;
+  border: none;
+  background-color: black;
+  color: white;
+}
+#tribute-link {
+  color: lightblue;
+  text-decoration: underline;
+}
+
+a:-webkit-any-link {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+.clicked {
+  border-left: 10px solid black;
+}
+.topic {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 13px;
+  box-shadow: 8px 8px 10px #aaa;
+  max-width: 800px;
+}
+
+#lastimg {
+  width: 300px;
+  height: auto;
+  float: left;
+  padding-top: 10px;
+}
+.more {
+  display: none;
+}
+.myBtn {
+  float: right;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+  display: block;
+}
+.dots {
+  display: none;
+}
+mark {
+  background-color: black;
+  color: white;
+}
+.information {
+  font-family: "IBM Plex Serif", serif;
+}
+.tablet {
+  display: none;
+}
+
+/*------------------------FOR TABLETS--------------*/
+@media screen and (max-width: 600px) {
+  aside {
+    display: none;
+  }
+
+  .tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    margin-right: 50px;
+  }
+  .tablet div {
+    background-color: #b7bdb9;
+    margin: 5px;
+    padding: 20px;
+    border: 1px solid white;
+    width: 100%;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 60px auto 60px;
+    grid-template-areas:
+      "Header Header"
+      "Main   Main"
+      "Footer Footer";
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    padding-left: 10px;
+    align-items: center;
+  }
+}
+
+/*----------------FOR MOBILES SUCH AS IPHONES-------------*/
+@media screen and (max-width: 414px) {
+  body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "Header Header"
+      "Main   Main"
+      "Footer Footer";
+  }
+  aside {
+    display: none;
+  }
+  .tablet {
+    display: none;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    padding-left: 0px;
+    align-items: center;
+  }
+  main {
+    margin: 0;
+    padding-left: 0;
+  }
+  .topic {
+    max-width: 414px;
+  }
+  .image {
+    float: none;
+  }
+  #lastimg {
+    float: none;
+  }
+  p {
+    font-family: "Museo Sans Rounded", "Segoe UI", "Helvetica Neue", sans-serif;
+    font-weight: 390;
+    font-size: 10px;
+    line-height: 22px;
+    color: black;
+    padding-left: 5px;
+  }
+}
+@media screen and (max-width: 379px) {
+  /* start of phone styles */
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "Header Header"
+      "Main   Main"
+      "Footer Footer";
+  }
+  aside {
+    display: none;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    padding-left: 10px;
+    align-items: center;
+  }
+  p {
+    font-family: "Museo Sans Rounded", "Segoe UI", "Helvetica Neue", sans-serif;
+    font-weight: 390;
+    font-size: 10px;
+    line-height: 22px;
+    color: black;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    grid-area: Main;
+    background-color: white;
+    padding-left: 0px;
+  }
+  .image {
+    margin-right: 50px;
+    max-width: 350px;
+    height: 350px;
+    float: none;
+  }
+  .topic {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 13px;
+    box-shadow: 8px 8px 10px #aaa;
+    max-width: 800px;
+  }
+  #NBD {
+    padding-top: 20px;
+  }
+  #lastimg {
+    float: none;
+  }
+  .tablet {
+    display: none;
+  }
+}
+/*---------------------SMALL DEVICES-----------------*/
+@media screen and (max-width: 375px) {
+  .topic {
+    max-width: 300px;
+  }
+}
+
+/*--------------------EXTRA SMALL DEVICES------------*/
+@media screen and (max-width: 320px) {
+  .topic {
+    max-width: 290px;
+  }
+  main {
+    max-width: 300px;
+    margin: 0;
+  }
+  .image {
+    margin-right: 0px;
+  }
+  p {
+    font-weight: 630;
+  }
+}
